@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Data Visualization Exercise 1.2">
+    <meta name="keywords" content="HTML and CSS">
+    <meta name="author" content="Duc Thuan Tran">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Task 1.1 HTML and CSS Demo Page</title>
+    <!-- insert description of the exercise -->   
+
+    <style>
+    </style>
+
+</head>
+<body>
+    <h1>Title of Article about Interesting Visualization</h1>
+
+    <h2>Pets and the Pandemic</h2>
+
+    <p><i>A report from Animal Medicines Australia (AMA) has found that many</i> Australians took the opportunity to introduce a pet into their household during the pandemic. 
+    Their survey indicated that there was a significant increase in the percent of households taking in a new dog, fish, or bird. 
+    <b>Their research also indicated that pets had a number of positive influences on their lives such as:</b></p> 
+
+    <ul>
+        <li>companionship.</li>
+        <li>better mental health.</li>
+        <li>joy and happiness.</li>
+    </ul>
+
+    <!-- Buttons to switch between images -->
+    <div> 
+        <button onclick="changeImage('2019image.png', 'Comparison of Pet ownership in 2019. DataSource: Your Data Source Link for 2019')">2019</button>
+        <button onclick="changeImage('2021image.png', 'Comparison of Pet ownership in 2021. DataSource: Your Data Source Link for 2021')">2021</button>
+        <button onclick="changeImage('bothimage.png', 'Comparison of Pet ownership in 2019 and 2021. DataSource: Your Data Source Link for Both')">both</button>
+    </div>
+
+    
+    <img id="OriginImage" src="bothimage.png" alt="2019-2021">
+    
+    <figure>
+        <figcaption id="figCaption">Fig 3. Comparison of Pet ownership in 2019 and 2021. DataSource: Your Data Source Link for Both</figcaption>
+    </figure>
+
+     
+
+    <script>
+        // JavaScript function to change the image and caption
+        function changeImage(imageSource, captionText) {
+            // Update image source
+            document.getElementById('OriginImage').src = imageSource;
+
+            // Update caption
+            document.getElementById('figCaption').innerText = captionText;
+        } 
+    </script>
+  
+
+<p>With the increase in pet ownership, the AMA is encouraging policymakers to consider the needs of companion animals and their owners when considering rental, strata, and body corporate regulations as well as accepting animals in public places and transport.</p>
+
+<footer>COS30045 Data Visualization</footer>
+
+</body>
+</html>
