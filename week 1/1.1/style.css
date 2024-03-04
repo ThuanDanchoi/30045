@@ -1,0 +1,48 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    
+}
+
+h1{
+    color: #007BFF;
+}
+
+h2{
+    color: burlywood;
+}
+
+p {
+    line-height: 1.4;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+figure {
+    
+    margin: 0;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.8em;
+    color: #777;
+}
+
+footer {
+    margin-top: 20px;
+    
+    font-size: 0.8em;
+    color: #777;
+}
