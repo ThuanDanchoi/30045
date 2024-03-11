@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Data Visualization Exercise 2.1">
+    <meta name="keywords" content="HTML, CSS and D3">
+    <meta name="author" content="Duc Thuan Tran">
+
+    <link rel="stylesheet" href="">
+
+    <title> Task 2.1 D3 Data Binding </title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h1> Creating and Formatting paragraph elements with D3 </h1>
+
+    <script>
+      //sample datasee
+        var dataset = [14, 5, 26, 23, 9];  
+
+        d3.select("body").selectAll("p")
+          .data(dataset)
+          .enter()
+          .append("p")
+          .text(function(d) {
+             // Set the text content based on the data
+            return "Thuan watched " + d + " dog videos.";
+          })
+          // apply color based on value of data to check if the data value is greater than 10 (set red or black)
+          .style("color", function(d) { 
+            return d > 10 ? "red" : "black";
+          }) 
+    </script>
+
+    <p></p>  
+    <br>
+    <br><br>
+    <footer style="color: grey;"> COS30045 Data Visualisation<br>
+      Duc Thuan Tran </footer>
+</body>
+</html>
+
+

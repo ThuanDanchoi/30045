@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Data Visualization Exercise 2.2">
+    <meta name="keywords" content="HTML CSS and D3">
+    <meta name="author" content="Duc Thuan Tran">
+
+    <link rel="stylesheet" href="">
+
+    <title> Task 2.2 D3 Drawing with Data </title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h1> Drawing with Data </h1>
+    <script>
+
+        // set the dimension of the svg
+        var w = 500;
+        var h = 100;
+        var barpadding = 1;
+
+        // define dataset
+        var dataset = [37, 26, 79, 63, 84, 96, 42, 19, 51, 38];
+
+        //create an svg element & its dimension
+        var svg = d3.select("body")
+                    .append("svg")
+                    .attr("width", w)
+                    .attr("height", h);
+
+        // bind data to rectangle elements
+        svg.selectAll("rect")
+           .data(dataset)
+           .enter()
+           .append("rect")
+
+        // set the x-cordinate on each bar position in the dataset
+           .attr("x", function(d, i){
+                return i * (w / dataset.length);
+           })
+        
+        // set the y-cordinate on each bar data value
+           .attr("y", function(d){
+            return h - d;
+           })
+        
+           // set the width of each bar padding between bars 
+           .attr("width", w / dataset.length - barpadding)
+
+           // set the height of each bar data value
+           .attr("height", function(d) {
+            return d;
+           })
+
+           // set the fill color of each bar data value (mint color)
+           .attr("fill", function(d) {
+            return "rgb(0, " + Math.round(d * 10) + ", " + Math.round(d * 5) + ")";
+        });
+        
+        
+
+
+    </script>
+    
+    <footer style="color: grey;"> COS30045 Data Visualisation<br>
+        Duc Thuan Tran </footer>
+    
+</body>
+</html>
