@@ -1,0 +1,26 @@
+.area {
+    fill: blue;  
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.halfMillionMark {
+    stroke: burlywood; /* Red color for the dashed line */
+    stroke-dasharray: 5,5; /* Dashed line styling */
+}
+
+.halfMillionLabel {
+    fill: burlywood; /* Red color for the text label */
+}
+
+
